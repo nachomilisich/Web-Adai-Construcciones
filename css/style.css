@@ -57,8 +57,9 @@ body {
 .nav > .nav-btn {
     display: none;
   }
-  .nav-btn:hover {
-    background-color: #ffffff;
+.nav-btn:hover {
+    background-color: #cfdae0;
+    border-radius: 50%;
   }
   
 .nav > .nav-links {
@@ -90,7 +91,7 @@ body {
   }
 
 .nav > .nav-links > ul li a:hover{
-    color: lightblue;
+    color:#ffffff;
   }
   
 .nav > #nav-check {
@@ -114,7 +115,7 @@ body {
 }
 
 
-@media (max-width:1075px) {
+@media (max-width:890px) {
 
 .nav > .nav-btn {
     display: inline-block;
@@ -145,7 +146,7 @@ body {
     height: 0px;
     transition: all 0.3s ease-in;
     overflow-y: hidden;
-    top: 50px;
+    top: 45px;
     left: 0px;
     }
 
@@ -179,22 +180,63 @@ body {
     }
 
 .carousel-inner{
-    margin-top: 45px;
+    margin-top: 5%;
+    height: 40vh;
+    }
+.carousel-item{
+    margin-top: 0.2%;
     height: 40vh;
     }
 }
+#textoTitulo{
+    color: #5daade;
+    font-size:5vh;
+}
 
-#fraseConstruccion{
-    text:white;
+#textoPasos{
+    color: #5daade;
+    font-size: large;
+}
+
+#textoEmpresas{
+    color: #5daade;
+    font-size: small;
 }
 
 .empresas{
-    margin-top: 20vh;
+    margin-top: 10vh;
+    color:#5daade;
 }
 
 #logos{
     height: 10vh;
     width: 10vh;
+}
+
+.parana{
+    margin-top: 10vh;
+    color: #5daade;
+}
+
+footer img{
+    height: 20vh;
+    margin-left: 5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+footer {
+    background-color: #1f4864;
+    color:#5daade;
+}
+
+.girar {
+    animation-duration: 4s;
+    animation-name: giratorio;
+    animation-iteration-count:infinite;
+}
+@keyframes giratorio {
+    0% { transform: rotate(0deg);}
+    100% { transform: rotate(360deg);}
 }
 
 

@@ -1,0 +1,25 @@
+{
+  "name": "webadaiconstrucciones",
+  "version": "1.0.0",
+  "description": "Web ADAI",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --include-path scss scss/styles.scss css/styles.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+    "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nachomilisich/Web-Adai-Construcciones.git"
+  },
+  "author": "Ignacio Milisich",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nachomilisich/Web-Adai-Construcciones/issues"
+  },
+  "homepage": "https://github.com/nachomilisich/Web-Adai-Construcciones#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.3",
+    "nodemon": "^2.0.20"
+  }
+}

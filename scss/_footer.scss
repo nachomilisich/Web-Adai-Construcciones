@@ -1,0 +1,20 @@
+
+footer {
+    background-color: #1f4864;
+    color:$color-letras-celeste;
+    margin-bottom: 0%;
+img{
+    height: 20vh;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+}
+.girar {
+    animation-duration: 4s;
+    animation-name: giratorio;
+    animation-iteration-count:infinite;
+}
+@keyframes giratorio {
+    0% { transform: rotate(0deg);}
+    100% { transform: rotate(360deg);}
+}

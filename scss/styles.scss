@@ -1,3 +1,9 @@
+@import "colores";
+@import "nav";
+@import "tipografia";
+@import "footer";
+
+
 * {
     box-sizing: border-box;
     font-family: "dosis";
@@ -13,8 +19,7 @@ body {
 }
 
 .background {
-    background-color: #000000
-;
+    background-color: $color-fondo-negro;
   }
 
 @keyframes fadeInAnimation {
@@ -32,7 +37,7 @@ body {
     top: 0%;
     height: 45px;
     width: 100%;
-    background-color: #1f4864;
+    background-color: $color-fondo;
     z-index: 2;
   }
   
@@ -189,24 +194,24 @@ body {
     height: 40vh;
     }
 }
-#textoTitulo{
-    color: #5daade;
+.textoTitulo{
+    color: $color-letras-celeste;
     font-size:5vh;
 }
 
 #textoPasos{
-    color: #5daade;
+    color: $color-letras-celeste;
     font-size: large;
 }
 
 #textoEmpresas{
-    color: #5daade;
+    color: $color-letras-celeste;
     font-size: small;
 }
 
 .empresas{
     margin-top: 10vh;
-    color:#5daade;
+    color:$color-letras-celeste;
 }
 
 #logos{
@@ -216,18 +221,18 @@ body {
 
 .parana{
     margin-top: 10vh;
-    color: #5daade;
+    color: $color-letras-celeste;
 }
 
 footer img{
     height: 20vh;
     margin-left: 5%;
     margin-top: 5%;
-    margin-bottom: 5%;
 }
 footer {
     background-color: #1f4864;
-    color:#5daade;
+    color:$color-letras-celeste;
+    margin-bottom: 0%;
 }
 
 .girar {
@@ -240,5 +245,14 @@ footer {
     100% { transform: rotate(360deg);}
 }
 
+@mixin cajaDeFondo {
+    margin-top: 2%;
+    background-color: $color-fondo-caja;
+    padding: 2%;
+    margin-left: 10%;
+    width: 80%;
+    border-radius: 10px;
+}
 
-
+.caja { @include cajaDeFondo; }
+  

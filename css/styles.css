@@ -147,7 +147,7 @@ body {
     margin-top: 0.2%;
     height: 40vh; } }
 
-#textoTitulo {
+.textoTitulo {
   color: #5daade;
   font-size: 5vh; }
 
@@ -174,12 +174,12 @@ body {
 footer img {
   height: 20vh;
   margin-left: 5%;
-  margin-top: 5%;
-  margin-bottom: 5%; }
+  margin-top: 5%; }
 
 footer {
   background-color: #1f4864;
-  color: #5daade; }
+  color: #5daade;
+  margin-bottom: 0%; }
 
 .girar {
   animation-duration: 4s;
@@ -191,3 +191,11 @@ footer {
     transform: rotate(0deg); }
   100% {
     transform: rotate(360deg); } }
+
+.caja {
+  margin-top: 2%;
+  background-color: #131b20;
+  padding: 2%;
+  margin-left: 10%;
+  width: 80%;
+  border-radius: 10px; }

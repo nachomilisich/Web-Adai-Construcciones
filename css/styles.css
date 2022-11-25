@@ -5,18 +5,20 @@
   height: 45px;
   width: 100%;
   background-color: #1f4864;
-  z-index: 2; }
+  z-index: 2;
+  overflow-y: hidden; }
   .nav img {
-    width: 40px;
-    position: relative;
-    left: 6vh;
+    height: 40px;
+    width: 50px;
+    position: absolute;
+    left: 2vh;
     z-index: 2;
-    padding: 1px;
-    background-color: white;
-    border-radius: 50%;
     top: 2px; }
   .nav img:hover {
     background-color: lightblue; }
+
+.nav-title {
+  overflow-y: hidden; }
 
 .nav > .nav-header {
   display: inline; }
@@ -114,6 +116,9 @@
     height: calc(100vh - 50px);
     overflow-y: hidden; } }
 
+h5 {
+  overflow-y: hidden; }
+
 footer {
   background-color: #1f4864;
   color: #5daade;
@@ -123,7 +128,11 @@ footer {
     margin-left: 5%;
     margin-top: 5%; }
 
+footer a section {
+  overflow-y: hidden; }
+
 .girar {
+  overflow-y: hidden;
   animation-duration: 4s;
   animation-name: giratorio;
   animation-iteration-count: infinite; }
@@ -134,38 +143,83 @@ footer {
   100% {
     transform: rotate(360deg); } }
 
+.contact-section {
+  background: url(bg.png) no-repeat center;
+  background-size: cover;
+  padding: 40px 0; }
+
+.contact-section h1 {
+  text-align: center;
+  color: #ddd; }
+
+.border {
+  width: 100px;
+  height: 10px;
+  background: #34495e;
+  margin: 40px auto; }
+
+.contact-form {
+  max-width: 600px;
+  margin: auto;
+  padding: 0 10px;
+  overflow: hidden; }
+
+.contact-form-text {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 16px 0;
+  border: 0;
+  background: #111;
+  padding: 20px 40px;
+  outline: none;
+  color: #ddd;
+  transition: 0.5s; }
+
+.contact-form-text:focus {
+  box-shadow: 0 0 10px 4px #34495e; }
+
+textarea.contact-form-text {
+  resize: none;
+  height: 120px; }
+
+.contact-form-btn {
+  float: right;
+  border: 0;
+  background: #34495e;
+  color: #fff;
+  padding: 12px 50px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.5s; }
+
+.contact-form-btn:hover {
+  background: #2980b9; }
+
 * {
   box-sizing: border-box;
-  font-family: "dosis"; }
+  font-family: "dosis";
+  overflow-x: hidden; }
+
+h2 {
+  overflow-y: hidden; }
+
+h1 {
+  overflow-y: hidden; }
 
 body {
   margin: 0px;
   animation: fadeInAnimation ease 3s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
-  background-color: #65B1E5;
-  overflow-y: auto; }
+  background-color: #65B1E5; }
 
 .background {
   background-color: #000000; }
 
-@keyframes fadeInAnimation {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
-
 .carousel-inner {
   margin-top: 30px;
   height: 80vh; }
-
-@media (max-width: 890px) {
-  .carousel-inner {
-    margin-top: 5%;
-    height: 40vh; }
-  .carousel-item {
-    margin-top: 0.2%;
-    height: 40vh; } }
 
 .textoTitulo {
   color: #5daade;
@@ -173,11 +227,11 @@ body {
 
 #textoPasos {
   color: #5daade;
-  font-size: 24px; }
+  font-size: 5vh; }
 
 #textoEmpresas {
   color: #5daade;
-  font-size: 36px; }
+  font-size: 5vh; }
 
 .empresas {
   margin-top: 10vh;
@@ -191,6 +245,11 @@ body {
   margin-top: 7vh;
   color: #5daade; }
 
+section div div img {
+  height: 16vh;
+  background-color: #0c2d43;
+  border-radius: 10vh; }
+
 .caja {
   margin-top: 2%;
   background-color: #131b20;
@@ -202,6 +261,105 @@ body {
 
 .fotosIntegrantes, #fotosEquipo {
   text-align: center;
-  height: 30vh;
-  margin: 10vh;
+  height: 20vh;
   color: #5daade; }
+
+#portfolio {
+  margin-top: 10vh; }
+
+#portfolioMenu {
+  color: #a5dcdf; }
+
+.zoom-box {
+  height: 90vh auto;
+  padding: 15px;
+  margin: 2px auto;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+  overflow-y: hidden; }
+
+.zoom-box:hover {
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5); }
+
+#fotosPortfolio:hover {
+  transform: scale(1.5); }
+
+.gallery {
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  column-count: 3;
+  -webkit-column-width: 33%;
+  -moz-column-width: 33%;
+  column-width: 33%;
+  overflow-y: hidden; }
+
+@media (max-width: 450px) {
+  .gallery {
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    column-count: 1;
+    -webkit-column-width: 100%;
+    -moz-column-width: 100%;
+    column-width: 100%; } }
+
+#logoBlanco {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+#trazo {
+  height: 25vw;
+  margin-top: 8vh;
+  width: 50vw;
+  stroke-dasharray: 2730;
+  stroke-dashoffset: 2730;
+  animation: llenar 10s linear infinite; }
+
+#circulo {
+  stroke-dasharray: 2730;
+  stroke-dashoffset: 2730;
+  animation: llenar 230s linear infinite; }
+
+@keyframes llenar {
+  0% {
+    stroke-dashoffset: 2730; }
+  100% {
+    stroke-dashoffset: 0; } }
+
+.contenedorFraseAdai {
+  display: flex;
+  justify-content: center;
+  width: 330px;
+  margin-left: 40%; }
+
+.fraseAdai {
+  display: flex;
+  overflow: hidden;
+  color: white;
+  white-space: nowrap;
+  font-size: 5vh;
+  width: 0;
+  animation: typing 5s forwards infinite; }
+
+@keyframes typing {
+  from {
+    width: 0; }
+  to {
+    width: 100%; } }
+
+@media (max-width: 890px) {
+  .carousel-inner {
+    margin-top: 5%;
+    height: 40vh; }
+  .carousel-item {
+    margin-top: 0.2%;
+    height: 40vh; }
+  .contenedorFraseAdai {
+    display: flex;
+    justify-content: center;
+    width: 310px;
+    margin-left: 10vw; } }

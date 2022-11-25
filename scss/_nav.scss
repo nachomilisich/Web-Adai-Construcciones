@@ -6,21 +6,22 @@
     width: 100%;
     background-color: $color-fondo;
     z-index: 2;
+    overflow-y: hidden;
  img {
-    width: 40px;
-    position: relative;
-    left: 6vh;
+    height: 40px;
+    width: 50px;
+    position: absolute;
+    left: 2vh;
     z-index: 2;
-    padding: 1px;
-    background-color: white;
-    border-radius: 50%;
     top: 2px;
   }
 img:hover{
     background-color: lightblue;
 }
 }
-
+.nav-title {
+  overflow-y: hidden;
+}
 .nav > .nav-header {
     display: inline;
   }
@@ -85,67 +86,57 @@ img:hover{
 
 
  @media (max-width:890px) {
-
-    .nav > .nav-btn {
-        display: inline-block;
-        position: absolute;
-        right: 0px;
-        top: 0px;
-        }
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    }
+.nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 40px;
+    padding: 13px;
+    }
+.nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+    }
+.nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #6C757D;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 45px;
+    left: 0px;
+    }
+.nav > .nav-links > ul li a {
+    display: block;
+    width: 100%;
+    }
     
-    .nav > .nav-btn > label {
-        display: inline-block;
-        width: 50px;
-        height: 40px;
-        padding: 13px;
-        }
-    
-    .nav > .nav-btn > label > span {
-        display: block;
-        width: 25px;
-        height: 10px;
-        border-top: 2px solid #eee;
-        }
-    
-    .nav > .nav-links {
-        position: absolute;
-        display: block;
-        width: 100%;
-        background-color: #6C757D;
-        height: 0px;
-        transition: all 0.3s ease-in;
-        overflow-y: hidden;
-        top: 45px;
-        left: 0px;
-        }
-    
-    .nav > .nav-links > ul li a {
-        display: block;
-        width: 100%;
-        }
-        
-    .nav > .nav-links > ul li{
-        display: block;
-        margin-bottom: 20px;
-        padding: 0;
-        background-color: #6C757D;
-        }
-    
-    .nav > .nav-links > ul li a{
-        margin-left: 40%;
-        }
-    
-    .nav .nav-links ul a.icon{
-        margin-left: 33%;
-        }
-    
-    .nav > #nav-check:not(:checked) ~ .nav-links {
-        height: 0px;
-        }
-    
-    .nav > #nav-check:checked ~ .nav-links {
-        height: calc(100vh - 50px);
-        overflow-y: hidden;
-        }
-
+.nav > .nav-links > ul li{
+    display: block;
+    margin-bottom: 20px;
+    padding: 0;
+    background-color: #6C757D;
+    }
+.nav > .nav-links > ul li a{
+    margin-left: 40%;
+    }
+.nav .nav-links ul a.icon{
+    margin-left: 33%;
+    }
+.nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+    }
+.nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: hidden;
+    }
     }

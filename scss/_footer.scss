@@ -1,4 +1,6 @@
-
+h5{
+    overflow-y: hidden;
+}
 footer {
     background-color: #1f4864;
     color:$color-letras-celeste;
@@ -9,7 +11,11 @@ img{
     margin-top: 5%;
 }
 }
+footer a section{
+    overflow-y: hidden;
+}
 .girar {
+    overflow-y: hidden;
     animation-duration: 4s;
     animation-name: giratorio;
     animation-iteration-count:infinite;

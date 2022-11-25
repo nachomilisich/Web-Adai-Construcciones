@@ -2,49 +2,38 @@
 @import "nav";
 @import "tipografia";
 @import "footer";
+@import "form";
 
 
 * {
     box-sizing: border-box;
     font-family: $fuente;
+    overflow-x: hidden;
   }
-  
+
+h2{
+    overflow-y: hidden;
+}
+h1{
+    overflow-y: hidden;
+}
+
 body {
     margin: 0px;
     animation: fadeInAnimation ease 3s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
     background-color: #65B1E5;
-    overflow-y: auto;
+    
 }
 
 .background {
     background-color: $color-fondo-negro;
   }
 
-@keyframes fadeInAnimation {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-     }
-}
-
 .carousel-inner{
     margin-top: 30px;
     height: 80vh;
-}
-
-@media (max-width:890px) {
-.carousel-inner{
-    margin-top: 5%;
-    height: 40vh;
-    }
-.carousel-item{
-    margin-top: 0.2%;
-    height: 40vh;
-    }
 }
 
 .textoTitulo{
@@ -54,12 +43,12 @@ body {
 
 #textoPasos{
     color: $color-letras-celeste;
-    font-size: $textoEstandard*2 ;
+    font-size: $textoEstandard ;
 }
 
 #textoEmpresas{
     color: $color-letras-celeste;
-    font-size: $textoEstandard*3;
+    font-size: $textoEstandard;
 }
 
 .empresas{
@@ -76,6 +65,11 @@ body {
     margin-top: 7vh;
     color: $color-letras-celeste;
 }
+section div div img{
+    height: 16vh;
+    background-color: #0c2d43;
+    border-radius: 10vh;
+}
 
 @mixin cajaDeFondo {
     margin-top: 2%;
@@ -91,10 +85,128 @@ body {
 
 .fotosIntegrantes {
     text-align: center;
-    height: 30vh;
-    margin: 10vh;
+    height: 20vh;
     color: $color-letras-celeste;
 }
+
 #fotosEquipo {
     @extend .fotosIntegrantes;
+}
+#portfolio  {
+    margin-top: 10vh;
+}
+#portfolioMenu{
+    color: $color-letras-celeste-claro;
+}
+.zoom-box {
+    height: 90vh auto;
+    padding: 15px;
+    margin: 2px auto;
+    -webkit-transition: -webkit-transform 0.2s;
+    transition: -webkit-transform 0.2s;
+    transition: transform 0.2s;
+    transition: transform 0.2s, -webkit-transform 0.2s;
+    overflow-y: hidden;
+  }
+  
+.zoom-box:hover {
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+}
+  
+#fotosPortfolio:hover {
+    transform: scale(1.5);
+}
+.gallery {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    -webkit-column-width: 33%;
+    -moz-column-width: 33%;
+    column-width: 33%;
+    overflow-y: hidden;
+}
+  
+  
+@media (max-width: 450px) {
+    .gallery {
+      -webkit-column-count: 1;
+      -moz-column-count: 1;
+      column-count: 1;
+      -webkit-column-width: 100%;
+      -moz-column-width: 100%;
+      column-width: 100%;
+    }
+  }
+  
+
+
+
+
+
+
+
+#logoBlanco {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#trazo{
+    height: 25vw;
+    margin-top: 8vh;
+    width: 50vw;
+    stroke-dasharray: 2730;
+    stroke-dashoffset: 2730;
+    animation: llenar 10s linear infinite;
+  }
+#circulo{
+    stroke-dasharray: 2730;
+    stroke-dashoffset: 2730;
+    animation: llenar 230s linear infinite;
+  }
+@keyframes llenar {
+    0% {
+      stroke-dashoffset: 2730;
+      }
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+.contenedorFraseAdai{
+    display: flex;
+    justify-content: center;
+    width: 330px;
+    margin-left: 40%;
+}
+.fraseAdai{
+    display: flex;
+    overflow: hidden;
+    color: white;
+    white-space: nowrap;
+    font-size: $textoEstandard;
+    width: 0;
+    animation: typing 5s forwards infinite;
+ }
+ @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+
+@media (max-width:890px) {
+.carousel-inner{
+    margin-top: 5%;
+    height: 40vh;
+    }
+.carousel-item{
+    margin-top: 0.2%;
+    height: 40vh;
+    }
+.contenedorFraseAdai{
+        display: flex;
+        justify-content: center;
+        width: 310px;
+        margin-left: 10vw;
+    }
 }

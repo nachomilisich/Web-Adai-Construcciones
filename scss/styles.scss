@@ -3,6 +3,8 @@
 @import "tipografia";
 @import "footer";
 @import "form";
+@import "scrollbar";
+@import "portfolio";
 
 
 * {
@@ -43,12 +45,12 @@ body {
 
 #textoPasos{
     color: $color-letras-celeste;
-    font-size: $textoEstandard ;
+    font-size: $textoEstandard*0.7 ;
 }
 
 #textoEmpresas{
     color: $color-letras-celeste;
-    font-size: $textoEstandard;
+    font-size: $textoEstandard*0.7;
 }
 
 .empresas{
@@ -83,68 +85,10 @@ section div div img{
 
 .caja { @include cajaDeFondo; }
 
-.fotosIntegrantes {
-    text-align: center;
-    height: 20vh;
-    color: $color-letras-celeste;
+.cajaProyectos{
+    left: 25%;
+    width: 50vw;
 }
-
-#fotosEquipo {
-    @extend .fotosIntegrantes;
-}
-#portfolio  {
-    margin-top: 10vh;
-}
-#portfolioMenu{
-    color: $color-letras-celeste-claro;
-}
-.zoom-box {
-    height: 90vh auto;
-    padding: 15px;
-    margin: 2px auto;
-    -webkit-transition: -webkit-transform 0.2s;
-    transition: -webkit-transform 0.2s;
-    transition: transform 0.2s;
-    transition: transform 0.2s, -webkit-transform 0.2s;
-    overflow-y: hidden;
-  }
-  
-.zoom-box:hover {
-    -webkit-transform: scale(1.5);
-    transform: scale(1.5);
-}
-  
-#fotosPortfolio:hover {
-    transform: scale(1.5);
-}
-.gallery {
-    -webkit-column-count: 3;
-    -moz-column-count: 3;
-    column-count: 3;
-    -webkit-column-width: 33%;
-    -moz-column-width: 33%;
-    column-width: 33%;
-    overflow-y: hidden;
-}
-  
-  
-@media (max-width: 450px) {
-    .gallery {
-      -webkit-column-count: 1;
-      -moz-column-count: 1;
-      column-count: 1;
-      -webkit-column-width: 100%;
-      -moz-column-width: 100%;
-      column-width: 100%;
-    }
-  }
-  
-
-
-
-
-
-
 
 #logoBlanco {
   background-color: black;

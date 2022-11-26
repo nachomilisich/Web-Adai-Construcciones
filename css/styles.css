@@ -103,7 +103,7 @@
     position: absolute;
     display: block;
     width: 100%;
-    background-color: #6c757d;
+    background-color: #2a2e31;
     height: 0px;
     transition: all 0.3s ease-in;
     top: 45px;
@@ -115,7 +115,7 @@
     display: block;
     margin-bottom: 20px;
     padding: 0;
-    background-color: #6c757d;
+    background-color: #2a2e31;
     z-index: 5; }
   .nav > .nav-links > ul li a {
     margin-left: 40%; }
@@ -133,7 +133,7 @@ h5 {
 
 footer {
   background-color: #0f293a;
-  color: #5daade;
+  color: #83aac4;
   margin-bottom: 0%;
   font-size: 3vh;
   font-weight: bold;
@@ -234,7 +234,7 @@ textarea.contact-form-text {
 .fotosIntegrantes, #fotosEquipo {
   text-align: center;
   height: 20vh;
-  color: #5daade; }
+  color: #83aac4; }
 
 #portfolio {
   margin-top: 10vh; }
@@ -345,20 +345,20 @@ body {
   height: 80vh; }
 
 .textoTitulo {
-  color: #5daade;
+  color: #83aac4;
   font-size: 5vh; }
 
 #textoPasos {
-  color: #5daade;
+  color: #83aac4;
   font-size: 3.5vh; }
 
 #textoEmpresas {
-  color: #5daade;
+  color: #83aac4;
   font-size: 3.5vh; }
 
 .empresas {
   margin-top: 10vh;
-  color: #5daade; }
+  color: #83aac4; }
 
 #logos {
   height: 10vh;
@@ -366,7 +366,7 @@ body {
 
 .parana {
   margin-top: 15px;
-  color: #5daade;
+  color: #83aac4;
   overflow-y: hidden; }
 
 h1 {

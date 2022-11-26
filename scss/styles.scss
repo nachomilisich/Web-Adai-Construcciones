@@ -6,90 +6,24 @@
 @import "scrollbar";
 @import "portfolio";
 
-
 * {
-    box-sizing: border-box;
-    font-family: $fuente;
-    overflow-x: hidden;
-  }
-
-h2{
-    overflow-y: hidden;
-}
-h1{
-    overflow-y: hidden;
+  box-sizing: border-box;
+  font-family: $fuente;
+  overflow-x: hidden;
 }
 
 body {
-    margin: 0px;
-    animation: fadeInAnimation ease 3s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-    background-color: #65B1E5;
-    
+  margin: 0px;
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  background-color: #65b1e5;
 }
 
 .background {
-    background-color: $color-fondo-negro;
-  }
-
-.carousel-inner{
-    margin-top: 30px;
-    height: 80vh;
+  background-color: $color-fondo-negro;
+  z-index: -1;
 }
-
-.textoTitulo{
-    color: $color-letras-celeste;
-    font-size:5vh;
-}
-
-#textoPasos{
-    color: $color-letras-celeste;
-    font-size: $textoEstandard*0.7 ;
-}
-
-#textoEmpresas{
-    color: $color-letras-celeste;
-    font-size: $textoEstandard*0.7;
-}
-
-.empresas{
-    margin-top: 10vh;
-    color:$color-letras-celeste;
-}
-
-#logos{
-    height: 10vh;
-    width: 10vh;
-}
-
-.parana{
-    margin-top: 7vh;
-    color: $color-letras-celeste;
-}
-section div div img{
-    height: 16vh;
-    background-color: #0c2d43;
-    border-radius: 10vh;
-}
-
-@mixin cajaDeFondo {
-    margin-top: 2%;
-    background-color: $color-fondo-caja;
-    padding: 2%;
-    margin-left: 10%;
-    margin-right: 10%;
-    width: 80%;
-    border-radius: 10px;
-}
-
-.caja { @include cajaDeFondo; }
-
-.cajaProyectos{
-    left: 25%;
-    width: 50vw;
-}
-
 #logoBlanco {
   background-color: black;
   display: flex;
@@ -97,60 +31,143 @@ section div div img{
   align-items: center;
 }
 
-#trazo{
-    height: 25vw;
-    margin-top: 8vh;
-    width: 50vw;
-    stroke-dasharray: 2730;
-    stroke-dashoffset: 2730;
-    animation: llenar 10s linear infinite;
-  }
-#circulo{
-    stroke-dasharray: 2730;
-    stroke-dashoffset: 2730;
-    animation: llenar 230s linear infinite;
-  }
-@keyframes llenar {
-    0% {
-      stroke-dashoffset: 2730;
-      }
-    100% {
-      stroke-dashoffset: 0;
-    }
-  }
-.contenedorFraseAdai{
-    display: flex;
-    justify-content: center;
-    width: 330px;
-    margin-left: 40%;
+#trazo {
+  height: 25vw;
+  margin-top: 10vh;
+  width: 50vw;
+  stroke-dasharray: 2730;
+  stroke-dashoffset: 2730;
+  animation: llenar 10s linear infinite;
 }
-.fraseAdai{
-    display: flex;
-    overflow: hidden;
-    color: white;
-    white-space: nowrap;
-    font-size: $textoEstandard;
-    width: 0;
-    animation: typing 5s forwards infinite;
- }
- @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
+#circulo {
+  stroke-dasharray: 2730;
+  stroke-dashoffset: 2730;
+  animation: llenar 230s linear infinite;
+}
+@keyframes llenar {
+  0% {
+    stroke-dashoffset: 2730;
   }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+.contenedorFraseAdai {
+  display: flex;
+  justify-content: center;
+  width: 330px;
+  margin-left: 40%;
+  margin-top:15px;
+  margin-bottom: 92px;
+}
+.fraseAdai {
+  display: flex;
+  color: white;
+  white-space: nowrap;
+  font-size: $textoEstandard;
+  width: 0;
+  animation: typing 5s forwards infinite;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
 
-@media (max-width:890px) {
-.carousel-inner{
+.carousel-inner {
+  margin-top: 30px;
+  height: 80vh;
+}
+
+.textoTitulo {
+  color: $color-letras-celeste;
+  font-size: 5vh;
+}
+
+#textoPasos {
+  color: $color-letras-celeste;
+  font-size: $textoEstandard * 0.7;
+}
+
+#textoEmpresas {
+  color: $color-letras-celeste;
+  font-size: $textoEstandard * 0.7;
+}
+
+.empresas {
+  margin-top: 10vh;
+  color: $color-letras-celeste;
+}
+
+#logos {
+  height: 10vh;
+  width: 10vh;
+}
+
+.parana {
+  margin-top: 15px;
+  color: $color-letras-celeste;
+  overflow-y: hidden;
+}
+h1{
+    overflow-y: hidden;
+}
+section div div img {
+  height: 16vh;
+  background-color: #0c2d43;
+  border-radius: 10vh;
+}
+
+@mixin cajaDeFondo {
+  margin-top: 2%;
+  background-color: $color-fondo-caja;
+  padding: 2%;
+  margin-left: 10%;
+  margin-right: 10%;
+  width: 80%;
+  border-radius: 10px;
+  
+}
+
+.caja {
+  @include cajaDeFondo;
+}
+
+.cajaProyectos {
+  left: 25%;
+  width: 50vw;
+}
+.nav-links ul li a{
+    z-index: 200;
+}
+@media (max-width: 890px) {
+  .carousel-inner {
     margin-top: 5%;
     height: 40vh;
-    }
-.carousel-item{
+  }
+  .carousel-item {
     margin-top: 0.2%;
     height: 40vh;
-    }
-.contenedorFraseAdai{
-        display: flex;
-        justify-content: center;
-        width: 310px;
-        margin-left: 10vw;
-    }
+  }
+  .contenedorFraseAdai {
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    margin-left: 25%;
+  }
+  .fraseAdai {
+    font-size: $textoEstandard * 0.5;
+  }
+  #textoPasos {
+    font-size: $textoEstandard * 0.45;
+  }
+  .textoTitulo {
+    font-size: $textoEstandard * 0.5;
+  }
+  footer {
+    height: 60vh;
+  }
 }

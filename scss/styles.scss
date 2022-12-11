@@ -32,9 +32,8 @@ body {
 }
 
 #trazo {
-  height: 25vw;
-  margin-top: 10vh;
-  width: 50vw;
+  height: 50vw;
+  margin-top: 45px;
   stroke-dasharray: 2730;
   stroke-dashoffset: 2730;
   animation: llenar 10s linear infinite;
@@ -68,9 +67,9 @@ body {
   width: 0;
   animation: typing 5s forwards infinite;
 }
-@keyframes typing {
+@keyframes typing{
   from {
-    width: 0;
+    width: 0%;
   }
   to {
     width: 100%;
@@ -155,11 +154,11 @@ section div div img {
   .contenedorFraseAdai {
     display: flex;
     justify-content: center;
-    width: 200px;
-    margin-left: 25%;
+    width: 300px;
+    margin-left: 19%;
   }
   .fraseAdai {
-    font-size: $textoEstandard * 0.5;
+    font-size: $textoEstandard * 0.8;
   }
   #textoPasos {
     font-size: $textoEstandard * 0.45;
